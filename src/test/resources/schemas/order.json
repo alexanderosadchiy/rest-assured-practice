@@ -1,0 +1,38 @@
+{
+  "xml": {
+    "name": "Order"
+  }, 
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "properties": {
+    "status": {
+      "enum": [
+        "placed", 
+        "approved", 
+        "delivered"
+      ], 
+      "type": "string", 
+      "description": "Order Status"
+    }, 
+    "shipDate": {
+      "type": "string", 
+      "format": "date-time"
+    }, 
+    "complete": {
+      "default": false, 
+      "type": "boolean"
+    }, 
+    "petId": {
+      "type": "integer", 
+      "format": "int64"
+    }, 
+    "id": {
+      "type": "integer", 
+      "format": "int64"
+    }, 
+    "quantity": {
+      "type": "integer", 
+      "format": "int32"
+    }
+  }
+}
